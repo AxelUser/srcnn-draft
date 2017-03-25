@@ -1,0 +1,22 @@
+{
+  "name": "srcnn-draft",
+  "version": "1.0.0",
+  "description": "First try in implementing Super Resolution Convolutional Neural Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelUser/srcnn-draft.git"
+  },
+  "keywords": [
+    "srcnn"
+  ],
+  "author": "Alexey Maltsev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AxelUser/srcnn-draft/issues"
+  },
+  "homepage": "https://github.com/AxelUser/srcnn-draft#readme"
+}
