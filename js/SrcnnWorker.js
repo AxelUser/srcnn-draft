@@ -13,12 +13,13 @@ self.onmessage = function(e) {
     });
 
     var imageData = e.data.imageData;
-    srcnnHandler.calc(imageData.data, imageData.width, imageData.height, function(image2x, width, height) {
+    srcnnHandler.calc(imageData.data, imageData.width, imageData.height, function(image2x, width, height, elapsedTime) {
       self.postMessage({
         command: 'result',
         image2x: image2x,
         width: width,
-        height: height
+        height: height,
+        elapsedTime: elapsedTime
       });
     }, function(phase, doneRatio, allBlocks, doneBlocks) {
       self.postMessage({

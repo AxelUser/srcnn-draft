@@ -158,6 +158,7 @@ define(['ChannelImage', 'ImagePlane'], (ChannelImage, ImagePlane) => {
       }
 
       calc(image, width, height, done, progress) {
+          var timeStart = new Date();
           if (this.scale2xModel == null) {
               // do nothing
               done(image, width, height);
@@ -184,8 +185,8 @@ define(['ChannelImage', 'ImagePlane'], (ChannelImage, ImagePlane) => {
           // recompose
           progress('recompose');
           let image2x = ChannelImage.channelCompose(imageR, imageG, imageB, imageA);
-
-          done(image2x, imageR.width, imageR.height);
+          var timeEnd = new Date();        
+          done(image2x, imageR.width, imageR.height, timeEnd - timeStart);
       }
   } 
 });

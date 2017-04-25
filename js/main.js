@@ -138,7 +138,7 @@
               context2x.putImageData(imageData2x, 0, 0);
               this.upscaledFile = canvas2x.toDataURL();
               this.isRunning = false;
-              this.progressMessage = "Done!";
+              this.progressMessage = `Done! Elapsed time: ${e.data.elapsedTime}ms.`;
               return;
             }
 
